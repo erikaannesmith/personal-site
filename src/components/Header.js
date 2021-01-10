@@ -11,7 +11,7 @@ import {
 const Header = () => {
   const { pathname } = useRouter();
 
-  const navItems = ["itemOne", "itemTwo", "itemThree"];
+  const navItems = ["/itemOne", "/itemTwo", "/itemThree"];
   return (
     <StyledHeader>
       <Link href="/">
@@ -19,8 +19,8 @@ const Header = () => {
       </Link>
       <StyledNavItems>
         {navItems.map((item) => (
-          <StyledNavItem key={item} isActive={item === pathname.substring(1)}>
-            <Link href={`/${item}`}>{item}</Link>
+          <StyledNavItem key={item} isActive={item === pathname}>
+            <Link href={item}>{item}</Link>
           </StyledNavItem>
         ))}
       </StyledNavItems>

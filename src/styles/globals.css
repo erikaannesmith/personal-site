@@ -6,9 +6,15 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
   
-.content {  
+.page {  
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content {
   padding: 25px 25px;
-  background-color: #f9f7e7;
 }
 
 a {

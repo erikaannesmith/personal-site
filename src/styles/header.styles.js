@@ -1,9 +1,13 @@
 import styled, { css } from 'styled-components';
 
+const blush = '#b56a5ad4'
+const cowboyHat = '#edede3'
+const tan = '#d3b38c'
+
 export const StyledName = styled.button`
-  color: #f9f7e7;
-  background-color: #f3aaaa;
-  border: 4px solid #f9f7e7;
+  color: ${cowboyHat};
+  background-color: ${tan};
+  border: 4px solid ${cowboyHat};
   font-size: 30px;
   font-weight: 700;
   width: fit-content;
@@ -13,7 +17,7 @@ export const StyledName = styled.button`
 `;
 
 export const StyledHeader = styled.div`
-  background-color: #62bfac;
+  background-color: ${blush};
   padding: 10px 25px;
   display: flex;
   justify-content: space-between;
@@ -21,15 +25,15 @@ export const StyledHeader = styled.div`
 `;
 
 export const StyledNavItems = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 `;
 
 export const StyledNavItem = styled.div`
-  color: #f9f7e7;
+  color: ${cowboyHat};
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  padding-left: 10px;
   :hover {
     text-decoration: underline;
   };
