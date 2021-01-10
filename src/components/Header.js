@@ -1,12 +1,31 @@
-import React from 'react'
-import { StyledName, StyledHeader } from '../styles/header.styles'
+import React from "react";
+import Link from "next/link";
+import { useRouter } from 'next/router';
+import {
+  StyledName,
+  StyledHeader,
+  StyledNavItems,
+  StyledNavItem,
+} from "../styles/header.styles";
 
 const Header = () => {
+  const { pathname } = useRouter();
+
+  const navItems = ["itemOne", "itemTwo", "itemThree"];
   return (
     <StyledHeader>
-      <StyledName>ERIKA SMITH</StyledName>
+      <Link href="/">
+        <StyledName>ERIKA SMITH</StyledName>
+      </Link>
+      <StyledNavItems>
+        {navItems.map((item) => (
+          <StyledNavItem key={item} isActive={item === pathname.substring(1)}>
+            <Link href={`/${item}`}>{item}</Link>
+          </StyledNavItem>
+        ))}
+      </StyledNavItems>
     </StyledHeader>
-  )
-}
+  );
+};
 
 export default Header;

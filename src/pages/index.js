@@ -1,12 +1,12 @@
 import React from "react";
-import { StyledContent, StyledProfileImage } from "../styles/index.styles"
+import { StyledProfileImage } from "../styles/index.styles"
 
 export default function Home({ userData = {} }) {
   return (
-    <StyledContent>
+    <>
       <StyledProfileImage width={200} src={userData.avatar_url} />
       content content content....
-    </StyledContent>
+    </>
   );
 }
 
