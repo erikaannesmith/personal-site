@@ -1,7 +1,13 @@
 import React from "react";
+import { StyledName } from '../styles/index.styles'
 
 export default function Home({ userData = {} }) {
-  return <><img width={100} src={userData.avatar_url}/>ERIKA SMITH</>;
+  return (
+    <>
+      <img width={100} src={userData.avatar_url} />
+      <StyledName>ERIKA SMITH</StyledName>
+    </>
+  );
 }
 
 export async function getStaticProps() {
