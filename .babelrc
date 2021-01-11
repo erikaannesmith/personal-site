@@ -3,6 +3,10 @@
     "development": {
       "presets": ["next/babel"],
       "plugins": ["babel-plugin-styled-components"]
+    },
+    "production": {
+      "presets": ["next/babel"],
+      "plugins": ["babel-plugin-styled-components"]
     }
   },
   "presets": ["@babel/preset-react"]
