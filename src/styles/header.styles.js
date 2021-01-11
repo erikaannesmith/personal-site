@@ -2,11 +2,11 @@ import styled, { css } from 'styled-components';
 
 const blush = '#b56a5ad4'
 const cowboyHat = '#edede3'
-const tan = '#d3b38c'
+const suntan = '#d3b38c'
 
 export const StyledName = styled.button`
   color: ${cowboyHat};
-  background-color: ${tan};
+  background-color: ${blush};
   border: 4px solid ${cowboyHat};
   font-size: 30px;
   font-weight: 700;
@@ -17,7 +17,7 @@ export const StyledName = styled.button`
 `;
 
 export const StyledHeader = styled.div`
-  background-color: ${blush};
+  background-color: ${suntan};
   padding: 10px 25px;
   display: flex;
   justify-content: space-between;
