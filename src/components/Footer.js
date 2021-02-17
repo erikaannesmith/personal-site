@@ -1,9 +1,9 @@
 import React from 'react'
-import { StyledFooter } from '../styles/footer.styles'
+import { StyledFooter, StyledEmail } from '../styles/footer.styles'
 
 const Footer = () => {
   return (
-    <StyledFooter>👋🏼 hello@erikasmith.dev</StyledFooter>
+    <StyledFooter>👋🏼 <StyledEmail href="mailto:hello@erikasmith.dev">hello@erikasmith.dev</StyledEmail></StyledFooter>
   )
 }
 

@@ -18,7 +18,7 @@ export const StyledName = styled.button`
 
 export const StyledHeader = styled.div`
   background-color: ${suntan};
-  padding: 10px 25px;
+  padding: 10px 100px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -30,7 +30,7 @@ export const StyledNavItems = styled.div`
 `;
 
 export const StyledNavItem = styled.div`
-  color: ${cowboyHat};
+  color: white;
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
