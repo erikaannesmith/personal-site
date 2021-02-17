@@ -1,12 +1,9 @@
 import React from "react";
-import Link from "next/link";
 import { StyledName, StyledHeader } from "../styles/header.styles";
 
-const Header = () => (
-  <StyledHeader>
-    <Link href="/">
-      <StyledName>ERIKA SMITH</StyledName>
-    </Link>
+const Header = ({ resetActiveSection }) => (
+  <StyledHeader onClick={resetActiveSection}>
+    <StyledName>ERIKA SMITH</StyledName>
   </StyledHeader>
 );
 

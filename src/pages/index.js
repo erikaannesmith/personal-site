@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   StyledTopContent,
   StyledProfileImage,
@@ -10,8 +10,11 @@ import {
 } from "../styles/index.styles";
 import experiences from "../../public/data/experiences";
 
-export default function Home({ userData = {} }) {
-  const [activeSection, setActiveSection] = useState(null);
+export default function Home({
+  userData = {},
+  activeSection,
+  setActiveSection,
+}) {
   return (
     <>
       <StyledTopContent>
