@@ -4,17 +4,19 @@ export default [
     items: [
       {
         name: "michigan",
-        link: "https://www.google.com/maps?q=washington,+mi&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjir-W78_HuAhXHFVkFHWTaAMYQ_AUoAXoECBoQAw",
+        link:
+          "https://www.google.com/maps?q=washington,+mi&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjir-W78_HuAhXHFVkFHWTaAMYQ_AUoAXoECBoQAw",
         timeline: "(fall 1995 - fall 2017)",
         summary:
           "I grew up about an hour north of Detroit in a town called Washington, where I lived until I left to attend college a few hours away in East Lansing.",
       },
       {
         name: "colorado",
-        link: "https://www.google.com/maps/place/Denver,+CO/@39.7642543,-104.9955376,11z/data=!3m1!4b1!4m5!3m4!1s0x876b80aa231f17cf:0x118ef4f8278a36d6!8m2!3d39.7392358!4d-104.990251",
+        link:
+          "https://www.google.com/maps/place/Denver,+CO/@39.7642543,-104.9955376,11z/data=!3m1!4b1!4m5!3m4!1s0x876b80aa231f17cf:0x118ef4f8278a36d6!8m2!3d39.7392358!4d-104.990251",
         timeline: "(fall 2017 - present)",
         summary:
-          "the fall after I graduated from college in Michigan, I moved in with my brother in Denver to attend Turing. after graduating, I had a brief stint in San Francisco to kickstart my career and returned to denver 6 months later.",
+          "the fall after I graduated from college in Michigan, I moved to Denver to attend Turing. after graduating, I had a brief stint in San Francisco to kickstart my career and returned to denver 6 months later.",
       },
     ],
   },
@@ -33,7 +35,7 @@ export default [
         link: "https://turing.io/",
         timeline: "(fall 2017 - spring 2018)",
         summary:
-          "I knew I wanted to be a full-stack engineer and after a bit of research, found that front-end work came a little more naturally to me. since I was going to invest the time and money, I figured I should enroll in the program that I wanted more support in. I started the backend program in 2017 and graduated 9 months later proficient enough in Ruby on Rails to land a job.",
+          "I knew I wanted to be a full-stack engineer and after a bit of research, found that front-end work came a little more naturally to me. since I was going to invest the time and money, I enrolled in the program that I wanted more support in. I started the backend program in 2017 and graduated 9 months later proficient enough in Ruby on Rails to land a job.",
       },
     ],
   },
