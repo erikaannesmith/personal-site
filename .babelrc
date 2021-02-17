@@ -2,11 +2,11 @@
   "env": {
     "development": {
       "presets": ["next/babel"],
-      "plugins": ["babel-plugin-styled-components"]
+      "plugins": ["babel-plugin-styled-components", "inline-react-svg"]
     },
     "production": {
       "presets": ["next/babel"],
-      "plugins": ["babel-plugin-styled-components"]
+      "plugins": ["babel-plugin-styled-components", "inline-react-svg"]
     }
   },
   "presets": ["@babel/preset-react"]
