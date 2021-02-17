@@ -1,27 +1,61 @@
-import React from "react";
-import { StyledContent, StyledProfileImage, StyledInfoTitle, StyledInfoSection } from "../styles/index.styles"
+import React, { useState } from "react";
+import {
+  StyledTopContent,
+  StyledProfileImage,
+  StyledInfoTitle,
+  StyledInfoSection,
+  StyledBottomContent,
+  StyledSectionInfo,
+  StyledInfo,
+} from "../styles/index.styles";
+import experiences from "../../public/data/experiences";
 
 export default function Home({ userData = {} }) {
+  const [activeSection, setActiveSection] = useState(null);
   return (
-    <StyledContent>
-      <StyledProfileImage width={200} src={userData.avatar_url} />
-      <div>
-        <StyledInfoSection>
-          <StyledInfoTitle>location</StyledInfoTitle>
-          michigan → san francisco → colorado
-        </StyledInfoSection>
-        <StyledInfoSection>
-          <StyledInfoTitle>education</StyledInfoTitle>
-          michigan state university → turing school of software & design
-        </StyledInfoSection>
-        <StyledInfoSection>
-          <StyledInfoTitle>work</StyledInfoTitle>
-          stitch fix → formidable labs
-        </StyledInfoSection>
-      </div>
-    </StyledContent>
+    <>
+      <StyledTopContent>
+        <StyledProfileImage width={200} src={userData.avatar_url} />
+        <div>
+          {experiences.map((experience) => (
+            <StyledInfoSection
+              key={experience.title}
+              onClick={() => setActiveSection(experience.title)}
+              isActive={activeSection === experience.title}
+            >
+              <StyledInfoTitle>{experience.title}</StyledInfoTitle>
+              {experience.items.map((item) => item.name).join(" → ")}
+            </StyledInfoSection>
+          ))}
+        </div>
+      </StyledTopContent>
+      <StyledBottomContent>
+        <SectionInfo section={activeSection} />
+      </StyledBottomContent>
+    </>
   );
 }
+
+const SectionInfo = ({ section }) => {
+  const sectionData = experiences.find(
+    (experience) => experience.title === section
+  );
+  return section ? (
+    <StyledSectionInfo>
+      {sectionData.items.map((item) => (
+        <div key={item.name}>
+          <a href={item.link} target="_blank">
+            <StyledInfo className="name">{item.name}</StyledInfo>
+          </a>
+          <StyledInfo className="timeline">{item.timeline}</StyledInfo>
+          <StyledInfo className="summary">{item.summary}</StyledInfo>
+        </div>
+      ))}
+    </StyledSectionInfo>
+  ) : (
+    "hi there! click a section to learn more ☝🏼"
+  );
+};
 
 export async function getStaticProps() {
   const response = await fetch(

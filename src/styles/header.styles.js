@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 const blush = '#b56a5ad4'
 const cowboyHat = '#edede3'
@@ -22,25 +22,4 @@ export const StyledHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-`;
-
-export const StyledNavItems = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-`;
-
-export const StyledNavItem = styled.div`
-  color: white;
-  font-size: 18px;
-  font-weight: 600;
-  text-transform: uppercase;
-  :hover {
-    text-decoration: underline;
-  };
-
-  ${({ isActive }) =>
-    isActive &&
-    css`
-      text-decoration: underline;
-    `}
 `;
