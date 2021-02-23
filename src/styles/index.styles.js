@@ -1,9 +1,9 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const StyledTopContent = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
 `;
 
 export const StyledProfileImage = styled.img`
@@ -17,12 +17,16 @@ export const StyledInfoTitle = styled.span`
   align-items: center;
 `;
 
-export const StyledInfoSection = styled.div`
+export const StyledInfoSection = styled.button`
+  width: 100%;
+  font-size: 16px;
+  background-color: transparent;
   display: flex;
   justify-content: space-between;
   line-height: 30px;
   padding: 10px;
-  border: ${({ isActive }) => `1px solid ${isActive ? 'black' : 'transparent'}`};
+  border: ${({ isActive }) =>
+    `1px solid ${isActive ? "black" : "transparent"}`};
   margin: 10px 0px;
   cursor: pointer;
   &:hover {
@@ -56,4 +60,11 @@ export const StyledInfo = styled.div`
   &.summary {
     line-height: 25px;
   }
+`;
+
+export const StyledLearnMore = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+  font-weight: 600;
 `;
