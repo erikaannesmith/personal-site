@@ -7,6 +7,7 @@ import {
   StyledBottomContent,
   StyledSectionInfo,
   StyledInfo,
+  StyledLearnMore,
 } from "../styles/index.styles";
 import experiences from "../../public/data/experiences";
 
@@ -30,6 +31,11 @@ export default function Home({
               {experience.items.map((item) => item.name).join(" → ")}
             </StyledInfoSection>
           ))}
+          {!activeSection && (
+            <StyledLearnMore>
+              hi there! click a section to learn more ☝🏼
+            </StyledLearnMore>
+          )}
         </div>
       </StyledTopContent>
       <StyledBottomContent>
@@ -43,20 +49,20 @@ const SectionInfo = ({ section }) => {
   const sectionData = experiences.find(
     (experience) => experience.title === section
   );
-  return section ? (
-    <StyledSectionInfo>
-      {sectionData.items.map((item) => (
-        <div key={item.name}>
-          <a href={item.link} target="_blank">
-            <StyledInfo className="name">{item.name}</StyledInfo>
-          </a>
-          <StyledInfo className="timeline">{item.timeline}</StyledInfo>
-          <StyledInfo className="summary">{item.summary}</StyledInfo>
-        </div>
-      ))}
-    </StyledSectionInfo>
-  ) : (
-    "hi there! click a section to learn more ☝🏼"
+  return (
+    section && (
+      <StyledSectionInfo>
+        {sectionData.items.map((item) => (
+          <div key={item.name}>
+            <a href={item.link} target="_blank">
+              <StyledInfo className="name">{item.name}</StyledInfo>
+            </a>
+            <StyledInfo className="timeline">{item.timeline}</StyledInfo>
+            <StyledInfo className="summary">{item.summary}</StyledInfo>
+          </div>
+        ))}
+      </StyledSectionInfo>
+    )
   );
 };
 
