@@ -65,6 +65,8 @@ export const StyledInfo = styled.div`
 export const StyledLearnMore = styled.div`
   display: flex;
   justify-content: flex-end;
-  padding-right: 10px;
+  line-height: 30px;
+  padding: 10px;
   font-weight: 600;
+  font-size: 18px;
 `;
