@@ -19,8 +19,8 @@ export const StyledPortfolioItem = styled.a`
   }
   &:hover {
     .title {
-      color: #c08279;
+      color: var(--blush);
     }
-    border-color: #c08279;
+    border-color: var(--blush);
   }
 `;

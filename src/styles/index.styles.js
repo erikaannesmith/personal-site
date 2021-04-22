@@ -26,11 +26,11 @@ export const StyledInfoSection = styled.button`
   line-height: 30px;
   padding: 10px;
   border: ${({ isActive }) =>
-    `1px solid ${isActive ? "#c08279" : "transparent"}`};
+    `1px solid ${isActive ? "var(--blush)" : "transparent"}`};
   margin: 10px 0px;
   cursor: pointer;
   &:hover {
-    border: 1px solid #c08279;
+    border: 1px solid var(--blush);
   }
 `;
 
@@ -52,7 +52,7 @@ export const StyledInfo = styled.div`
     font-weight: 600;
     &:hover {
       text-decoration: underline;
-      color: #c08279;
+      color: var(--blush);
     }
   }
   &.timeline {

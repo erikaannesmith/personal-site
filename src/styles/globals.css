@@ -1,12 +1,17 @@
+:root {
+  --blush: #c08279;
+  --suntan: #cf9879;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  }
-  
-.page {  
+}
+
+.page {
   height: 100vh;
   display: flex;
   flex-direction: column;

@@ -18,13 +18,13 @@ export const StyledEmail = styled.a`
   &:hover {
     font-weight: 500;
     text-decoration: underline;
-    color: #c08279;
+    color: var(--blush);
   }
 `;
 
 export const StyledIcon = styled.a`
   &:hover {
-    color: #c08279;
+    color: var(--blush);
   }
   svg {
     fill: currentColor;
