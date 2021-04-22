@@ -26,18 +26,18 @@ export const StyledInfoSection = styled.button`
   line-height: 30px;
   padding: 10px;
   border: ${({ isActive }) =>
-    `1px solid ${isActive ? "black" : "transparent"}`};
+    `1px solid ${isActive ? "#c08279" : "transparent"}`};
   margin: 10px 0px;
   cursor: pointer;
   &:hover {
-    border: 1px solid black;
+    border: 1px solid #c08279;
   }
 `;
 
 export const StyledBottomContent = styled.div`
   display: flex;
   justify-content: center;
-  padding: 100px;
+  padding: 70px 100px;
 `;
 
 export const StyledSectionInfo = styled.div`
@@ -52,6 +52,7 @@ export const StyledInfo = styled.div`
     font-weight: 600;
     &:hover {
       text-decoration: underline;
+      color: #c08279;
     }
   }
   &.timeline {

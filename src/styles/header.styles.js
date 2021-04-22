@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-const blush = '#b56a5ad4'
-const cowboyHat = '#edede3'
-const suntan = '#d3b38c'
+const blush = '#c08279'
+const cowboyHat = 'white'
+const suntan = '#cf9879'
 
-export const StyledName = styled.button`
+export const StyledName = styled.a`
   color: ${cowboyHat};
   background-color: ${blush};
   border: 4px solid ${cowboyHat};
@@ -22,4 +22,15 @@ export const StyledHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+`;
+
+export const StyledNav = styled.div`
+  text-transform: uppercase;
+  color: ${cowboyHat};
+  font-weight: 600;
+  padding-right: 10px;
+  font-size: 17px;
+  &:hover {
+    text-decoration: underline;
+  }
 `;
