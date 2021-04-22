@@ -1,13 +1,9 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-const blush = '#b56a5ad4'
-const cowboyHat = '#edede3'
-const suntan = '#d3b38c'
-
-export const StyledName = styled.button`
-  color: ${cowboyHat};
-  background-color: ${blush};
-  border: 4px solid ${cowboyHat};
+export const StyledName = styled.a`
+  color: white;
+  background-color: var(--blush);
+  border: 4px solid white;
   font-size: 30px;
   font-weight: 700;
   width: fit-content;
@@ -17,9 +13,20 @@ export const StyledName = styled.button`
 `;
 
 export const StyledHeader = styled.div`
-  background-color: ${suntan};
+  background-color: var(--suntan);
   padding: 10px 100px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+`;
+
+export const StyledNav = styled.div`
+  text-transform: uppercase;
+  color: white;
+  font-weight: 600;
+  padding-right: 10px;
+  font-size: 17px;
+  &:hover {
+    text-decoration: underline;
+  }
 `;
