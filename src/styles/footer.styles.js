@@ -12,6 +12,10 @@ export const StyledFooter = styled.div`
   padding: 50px 100px;
   display: flex;
   justify-content: space-between;
+  background-color: white;
+  @media screen and (max-width: 960px) {
+    padding: 30px 10px;
+  }
 `;
 
 export const StyledEmail = styled.a`
