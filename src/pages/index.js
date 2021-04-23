@@ -9,6 +9,7 @@ import {
   StyledInfo,
   StyledLearnMore,
   StyledValue,
+  StyledExperiences,
 } from "../styles/index.styles";
 import experiences from "../../public/data/experiences";
 
@@ -21,7 +22,7 @@ export default function Home({
     <>
       <StyledTopContent>
         <StyledProfileImage width={200} src={userData.avatar_url} />
-        <div>
+        <StyledExperiences>
           {experiences.map((experience) => (
             <StyledInfoSection
               key={experience.title}
@@ -32,13 +33,13 @@ export default function Home({
               <StyledValue>{experience.items.map((item) => item.name).join(" → ")}</StyledValue>
             </StyledInfoSection>
           ))}
-          {!activeSection && (
-            <StyledLearnMore>
-              hi there! click a section to learn more ☝🏼
-            </StyledLearnMore>
-          )}
-        </div>
+        </StyledExperiences>
       </StyledTopContent>
+      {!activeSection && (
+        <StyledLearnMore>
+          hi there! click a section to learn more ☝🏼
+        </StyledLearnMore>
+      )}
       <StyledBottomContent>
         <SectionInfo section={activeSection} />
       </StyledBottomContent>

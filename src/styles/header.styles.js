@@ -10,6 +10,9 @@ export const StyledName = styled.a`
   padding: 0 10px;
   letter-spacing: 2px;
   cursor: pointer;
+  @media screen and (max-width: 428px) {
+    width: 130px;
+  }
 `;
 
 export const StyledHeader = styled.div`
@@ -20,6 +23,9 @@ export const StyledHeader = styled.div`
   align-items: baseline;
   @media screen and (max-width: 960px) {
     padding: 10px;
+  }
+  @media screen and (max-width: 428px) {
+    align-items: center;
   }
 `;
 
