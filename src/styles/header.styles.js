@@ -18,6 +18,9 @@ export const StyledHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  @media screen and (max-width: 960px) {
+    padding: 10px;
+  }
 `;
 
 export const StyledNav = styled.div`

@@ -8,6 +8,7 @@ import {
   StyledSectionInfo,
   StyledInfo,
   StyledLearnMore,
+  StyledValue,
 } from "../styles/index.styles";
 import experiences from "../../public/data/experiences";
 
@@ -28,7 +29,7 @@ export default function Home({
               isActive={activeSection === experience.title}
             >
               <StyledInfoTitle>{experience.title}</StyledInfoTitle>
-              {experience.items.map((item) => item.name).join(" → ")}
+              <StyledValue>{experience.items.map((item) => item.name).join(" → ")}</StyledValue>
             </StyledInfoSection>
           ))}
           {!activeSection && (

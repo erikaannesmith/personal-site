@@ -1,6 +1,9 @@
 :root {
   --blush: #c08279;
   --suntan: #cf9879;
+  /* --desktop: 960px;
+  --tablet: 768px;
+  --mobile: 428px; */
 }
 
 html,
@@ -20,6 +23,11 @@ body {
 
 .content {
   padding: 50px 100px;
+}
+@media screen and (max-width: 960px) {
+  .content {
+    padding: 10px;
+  }
 }
 
 a {

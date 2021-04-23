@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const StyledTopContent = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
+  display: grid;
+  grid-template-columns: 20% 70%;
+  grid-gap: 10%;
+  align-items: center;
 `;
 
 export const StyledProfileImage = styled.img`
@@ -42,8 +43,8 @@ export const StyledBottomContent = styled.div`
 
 export const StyledSectionInfo = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 50%);
-  grid-gap: 50px;
+  grid-template-columns: repeat(2, 45%);
+  grid-gap: 10%;
 `;
 
 export const StyledInfo = styled.div`
@@ -70,4 +71,8 @@ export const StyledLearnMore = styled.div`
   padding: 10px;
   font-weight: 600;
   font-size: 18px;
+`;
+
+export const StyledValue = styled.div`
+  text-align: right;
 `;
