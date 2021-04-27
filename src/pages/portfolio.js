@@ -23,6 +23,12 @@ const Portfolio = () => {
 
 const items = [
   {
+    title: "What's in Your Water",
+    preview:
+      "NextJS + Mapbox app to show water quality breakdown in Denver, CO by location from 2011-2020.",
+    link: "https://heuristic-ramanujan-718439.netlify.app/",
+  },
+  {
     title:
       "The Case for Consistent Documentation (Or, How to Leave a Client in 10 Days)",
     preview:
