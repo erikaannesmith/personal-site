@@ -1,9 +1,14 @@
 import styled from "styled-components";
 
 export const StyledTopContent = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
+  display: grid;
+  grid-template-columns: 20% 70%;
+  grid-gap: 10%;
+  align-items: center;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const StyledProfileImage = styled.img`
@@ -15,6 +20,9 @@ export const StyledInfoTitle = styled.span`
   min-width: 300px;
   display: flex;
   align-items: center;
+  @media screen and (max-width: 768px) {
+    min-width: 50%;
+  }
 `;
 
 export const StyledInfoSection = styled.button`
@@ -32,18 +40,28 @@ export const StyledInfoSection = styled.button`
   &:hover {
     border: 1px solid var(--blush);
   }
+  @media screen and (max-width: 428px) {
+    justify-content: center;
+  }
 `;
 
 export const StyledBottomContent = styled.div`
   display: flex;
   justify-content: center;
   padding: 70px 100px;
+  @media screen and (max-width: 960px) {
+    padding: 50px;
+  }
 `;
 
 export const StyledSectionInfo = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 50%);
-  grid-gap: 50px;
+  grid-template-columns: repeat(2, 45%);
+  grid-gap: 10%;
+  @media screen and (max-width: 428px) {
+    grid-template-columns: none;
+    grid-template-rows: repeat(2, 45%);
+  }
 `;
 
 export const StyledInfo = styled.div`
@@ -70,4 +88,21 @@ export const StyledLearnMore = styled.div`
   padding: 10px;
   font-weight: 600;
   font-size: 18px;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
+`;
+
+export const StyledExperiences = styled.div`
+  @media screen and (max-width: 428px) {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+`;
+
+export const StyledValue = styled.div`
+  text-align: right;
+  @media screen and (max-width: 428px) {
+    display: none;
+  }
 `;
