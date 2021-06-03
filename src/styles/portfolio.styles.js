@@ -10,17 +10,18 @@ export const StyledPortfolioItem = styled.a`
   padding: 50px 40px;
   margin-bottom: 30px;
   max-width: 900px;
+  font-size: 20px;
   .title {
     font-weight: 700;
   }
   .preview {
-    font-size: 14px;
+    font-size: 18px;
     padding-top: 10px;
   }
   &:hover {
     .title {
-      color: var(--blush);
+      color: var(--darkgrey);
     }
-    border-color: var(--blush);
+    border-color: var(--darkgrey);
   }
 `;

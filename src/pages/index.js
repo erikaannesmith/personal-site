@@ -22,7 +22,7 @@ export default function Home({
     <>
       <StyledTopContent>
         <StyledProfileImage
-          width={200}
+          width={300}
           src="./headshot-1.jpeg"
           onMouseOver={(e) => (e.currentTarget.src = "./headshot-2.jpeg")}
           onMouseOut={(e) => (e.currentTarget.src = "./headshot-1.jpeg")}

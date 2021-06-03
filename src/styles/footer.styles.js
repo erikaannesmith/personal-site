@@ -11,6 +11,7 @@ export const StyledFooterWrapper = styled.div`
 export const StyledFooter = styled.div`
   padding: 50px 100px;
   display: flex;
+  font-size: 20px;
   justify-content: space-between;
   background-color: white;
   @media screen and (max-width: 960px) {
@@ -22,13 +23,13 @@ export const StyledEmail = styled.a`
   &:hover {
     font-weight: 500;
     text-decoration: underline;
-    color: var(--blush);
+    color: var(--darkgrey);
   }
 `;
 
 export const StyledIcon = styled.a`
   &:hover {
-    color: var(--blush);
+    color: var(--darkgrey);
   }
   svg {
     fill: currentColor;

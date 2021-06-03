@@ -5,7 +5,7 @@ export const StyledTopContent = styled.div`
   grid-template-columns: 20% 70%;
   grid-gap: 10%;
   align-items: center;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     display: flex;
     flex-direction: column;
   }
@@ -20,25 +20,25 @@ export const StyledInfoTitle = styled.span`
   min-width: 300px;
   display: flex;
   align-items: center;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     min-width: 50%;
   }
 `;
 
 export const StyledInfoSection = styled.button`
   width: 100%;
-  font-size: 16px;
+  font-size: 20px;
   background-color: transparent;
   display: flex;
   justify-content: space-between;
   line-height: 30px;
   padding: 10px;
   border: ${({ isActive }) =>
-    `1px solid ${isActive ? "var(--blush)" : "transparent"}`};
+    `1px solid ${isActive ? "var(--darkgrey)" : "transparent"}`};
   margin: 10px 0px;
   cursor: pointer;
   &:hover {
-    border: 1px solid var(--blush);
+    border: 1px solid var(--darkgrey);
   }
   @media screen and (max-width: 428px) {
     justify-content: center;
@@ -58,7 +58,7 @@ export const StyledSectionInfo = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 45%);
   grid-gap: 10%;
-  @media screen and (max-width: 428px) {
+  @media screen and (max-width: 800px) {
     grid-template-columns: none;
     grid-template-rows: repeat(2, 45%);
   }
@@ -70,14 +70,14 @@ export const StyledInfo = styled.div`
     font-weight: 600;
     &:hover {
       text-decoration: underline;
-      color: var(--blush);
+      color: var(--darkgrey);
     }
   }
   &.timeline {
     font-style: italic;
   }
   &.summary {
-    line-height: 25px;
+    line-height: 28px;
   }
 `;
 
@@ -88,7 +88,7 @@ export const StyledLearnMore = styled.div`
   padding: 10px;
   font-weight: 600;
   font-size: 18px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     justify-content: center;
   }
 `;
