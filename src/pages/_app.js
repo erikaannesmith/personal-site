@@ -4,17 +4,12 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 function MyApp({ Component, pageProps }) {
-  const [activeSection, setActiveSection] = useState(null);
   return (
     <div className="page">
       <div>
-        <Header resetActiveSection={() => setActiveSection(null)} />
+        <Header />
         <div className="content">
-          <Component
-            {...pageProps}
-            activeSection={activeSection}
-            setActiveSection={setActiveSection}
-          />
+          <Component {...pageProps} />
         </div>
       </div>
       <Footer />

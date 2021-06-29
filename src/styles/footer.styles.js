@@ -1,21 +1,19 @@
 import styled from "styled-components";
 
 export const StyledFooterWrapper = styled.div`
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
   border-top: 1px solid black;
 `;
 
 export const StyledFooter = styled.div`
-  padding: 50px 100px;
-  display: flex;
-  font-size: 20px;
-  justify-content: space-between;
   background-color: white;
+  height: 60px;
+  padding: 10px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
   @media screen and (max-width: 960px) {
-    padding: 30px 10px;
+    padding: 10px;
   }
 `;
 

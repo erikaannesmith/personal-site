@@ -1,13 +1,12 @@
 import React from "react";
-import { StyledName, StyledHeader, StyledNav } from "../styles/header.styles";
+import { StyledName, StyledHeader, StyledNav, StyledNavItem } from "../styles/header.styles";
 
-const Header = ({ resetActiveSection }) => (
-  <StyledHeader onClick={resetActiveSection}>
-    <StyledName href="/">ERIKA SMITH</StyledName>
+const Header = () => (
+  <StyledHeader>
+    <StyledName href="/">erika smith</StyledName>
     <StyledNav>
-      <div>
-        <a href="/portfolio">/portfolio</a>
-      </div>
+      <StyledNavItem href="/about">/about</StyledNavItem>
+      <StyledNavItem href="/portfolio">/portfolio</StyledNavItem>
     </StyledNav>
   </StyledHeader>
 );
