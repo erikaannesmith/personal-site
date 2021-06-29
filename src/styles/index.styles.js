@@ -7,12 +7,9 @@ export const StyledTopContent = styled.div`
   align-items: center;
   @media screen and (max-width: 1200px) {
     display: flex;
-    flex-direction: column;
+    padding: 0 100px;
+    justify-content: space-between;
   }
-`;
-
-export const StyledProfileImage = styled.img`
-  border-radius: 50%;
 `;
 
 export const StyledInfoTitle = styled.span`
@@ -39,6 +36,9 @@ export const StyledInfoSection = styled.button`
   cursor: pointer;
   &:hover {
     border: 1px solid var(--darkgrey);
+  }
+  @media screen and (max-width: 1200px) {
+    justify-content: flex-end;
   }
   @media screen and (max-width: 428px) {
     justify-content: center;
@@ -90,6 +90,7 @@ export const StyledLearnMore = styled.div`
   font-size: 18px;
   @media screen and (max-width: 1200px) {
     justify-content: center;
+    padding-top: 40px;
   }
 `;
 
@@ -102,7 +103,13 @@ export const StyledExperiences = styled.div`
 
 export const StyledValue = styled.div`
   text-align: right;
-  @media screen and (max-width: 428px) {
+  @media screen and (max-width: 1200px) {
     display: none;
+  }
+`;
+
+export const StyledProfileImage = styled.img`
+  @media screen and (max-width: 428px) {
+    width: 100%;
   }
 `;

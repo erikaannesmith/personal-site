@@ -21,14 +21,7 @@ export default function Home({
   return (
     <>
       <StyledTopContent>
-        <StyledProfileImage
-          width={300}
-          src="./headshot-1.jpeg"
-          onMouseOver={(e) => (e.currentTarget.src = "./headshot-2.jpeg")}
-          onMouseOut={(e) => (e.currentTarget.src = "./headshot-1.jpeg")}
-
-        />
-
+        <StyledProfileImage width={300} src="./headshot.JPG" />
         <StyledExperiences>
           {experiences.map((experience) => (
             <StyledInfoSection
