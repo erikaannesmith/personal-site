@@ -7,7 +7,6 @@ import {
   StyledDivider,
   StyledBlurbIntro,
 } from "../styles/index.styles";
-import experiences from "../../public/data/experiences";
 
 export default function Home({ userData = {} }) {
   return (
@@ -23,8 +22,8 @@ export default function Home({ userData = {} }) {
         <StyledBlurbSection>
           I'm a Denver-based software engineer primarily playing in the
           front-end space. I love developing clean, simple solutions to complex
-          problems and believe that collaborating with a wide range of
-          backgrounds, perspectives, and experiences enables us to deliver the
+          problems. I believe that collaborating with a broad range of
+          backgrounds, experiences, and perspectives enables us to deliver the
           best possible product.
         </StyledBlurbSection>
       </StyledBlurb>

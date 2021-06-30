@@ -4,7 +4,6 @@ export const StyledName = styled.a`
   color: white;
   font-size: 36px;
   width: fit-content;
-  padding: 0 10px;
   letter-spacing: 2px;
   cursor: pointer;
   @media screen and (max-width: 428px) {

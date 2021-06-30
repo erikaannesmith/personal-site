@@ -16,7 +16,7 @@ export default [
           "https://www.google.com/maps/place/Denver,+CO/@39.7642543,-104.9955376,11z/data=!3m1!4b1!4m5!3m4!1s0x876b80aa231f17cf:0x118ef4f8278a36d6!8m2!3d39.7392358!4d-104.990251",
         timeline: "(fall 2017 - present)",
         summary:
-          "the fall after I graduated from college in Michigan, I moved to Denver to attend Turing. after graduating, I had a brief stint in San Francisco to kickstart my career and returned to denver 6 months later.",
+          "the fall after I graduated from college in Michigan, I moved to Denver to attend Turing. after graduating, I had a brief stint in San Francisco to kickstart my career and returned to Denver 6 months later.",
       },
     ],
   },
