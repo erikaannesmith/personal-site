@@ -8,7 +8,7 @@ import {
   StyledBlurbIntro,
 } from "../styles/index.styles";
 
-export default function Home({ userData = {} }) {
+export default function Home() {
   return (
     <>
       <StyledProfileImageWrapper>
@@ -24,21 +24,11 @@ export default function Home({ userData = {} }) {
           front-end space. I love developing clean, simple solutions to complex
           problems. I believe that collaborating with a broad range of
           backgrounds, experiences, and perspectives enables us to deliver the
-          best possible product.
+          best possible product. I believe that the work we do can and does make
+          a difference and it's our responsibility to ensure that the tools we
+          build make the world a better place for everyone.
         </StyledBlurbSection>
       </StyledBlurb>
     </>
   );
-}
-
-export async function getStaticProps() {
-  const response = await fetch(
-    `https://api.github.com/users/erikaannesmith`
-  ).then((response) => response.json());
-
-  return {
-    props: {
-      userData: response,
-    },
-  };
 }

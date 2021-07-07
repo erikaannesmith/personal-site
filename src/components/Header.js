@@ -1,14 +1,40 @@
-import React from "react";
-import { StyledName, StyledHeader, StyledNav, StyledNavItem } from "../styles/header.styles";
+import React, { useState } from "react";
+import {
+  StyledName,
+  StyledHeaderWrapper,
+  StyledHeader,
+  StyledNav,
+  StyledNavItem,
+  StyledHamburger,
+} from "../styles/header.styles";
+import Hamburger from "./Hamburger";
+import SideNav from "./SideNav";
 
-const Header = () => (
-  <StyledHeader>
-    <StyledName href="/">erika smith</StyledName>
-    <StyledNav>
-      <StyledNavItem href="/about">/about</StyledNavItem>
-      <StyledNavItem href="/portfolio">/portfolio</StyledNavItem>
-    </StyledNav>
-  </StyledHeader>
-);
+const navOptions = ["/about", "/portfolio"];
 
+const Header = () => {
+  const [sideNavOpen, setSideNavOpen] = useState(false);
+
+  return (
+    <StyledHeaderWrapper>
+      <StyledHeader>
+        <StyledName href="/">erika smith</StyledName>
+        <StyledHamburger onClick={() => setSideNavOpen(true)}>
+          <Hamburger />
+        </StyledHamburger>
+        <StyledNav>
+          {navOptions.map((option) => (
+            <StyledNavItem href={option}>{option}</StyledNavItem>
+          ))}
+        </StyledNav>
+      </StyledHeader>
+      {sideNavOpen && (
+        <SideNav
+          closeSideNav={() => setSideNavOpen(false)}
+          navOptions={navOptions}
+        />
+      )}
+    </StyledHeaderWrapper>
+  );
+};
 export default Header;

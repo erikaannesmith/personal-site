@@ -5,6 +5,12 @@ export const StyledPortfolioItems = styled.div`
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-gap: 30px;
   padding: 70px 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+  @media screen and (max-width: 960px) {
+    grid-template-columns: none;
+    padding: 50px 30px;
+  }
 `;
 
 export const StyledPortfolioItem = styled.a`

@@ -12,6 +12,8 @@ export const StyledFooter = styled.div`
   align-items: center;
   justify-content: space-between;
   font-size: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
   @media screen and (max-width: 960px) {
     padding: 10px;
   }

@@ -6,6 +6,7 @@ import {
   StyledExperienceSummary,
   StyledDivider,
   StyledExperienceHeader,
+  StyledItemLink,
 } from "../styles/about.styles.js";
 import experiences from "../../public/data/experiences";
 
@@ -21,7 +22,9 @@ const About = () => {
           <StyledExperienceItems>
             {experience.items.map((item) => (
               <div>
-                {item.name}
+                <StyledItemLink href={item.link} target="_blank">
+                  {item.name}
+                </StyledItemLink>
                 <br />
                 {item.timeline}
                 <StyledExperienceSummary>

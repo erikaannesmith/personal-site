@@ -2,6 +2,11 @@ import styled from "styled-components";
 
 export const StyledContent = styled.div`
   padding: 70px 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+  @media screen and (max-width: 960px) {
+    padding: 50px 30px;
+  }
 `;
 
 export const StyledExperience = styled.div`
@@ -16,6 +21,10 @@ export const StyledExperienceItems = styled.div`
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-gap: 50px;
+  @media screen and (max-width: 960px) {
+    grid-template-columns: none;
+    grid-gap: 30px;
+  }
 `;
 
 export const StyledExperienceSummary = styled.div`
@@ -32,4 +41,10 @@ export const StyledDivider = styled.div`
 
 export const StyledExperienceHeader = styled.div`
   width: fit-content;
+`;
+
+export const StyledItemLink = styled.a`
+  &:hover {
+    color: var(--darkgrey);
+  }
 `;

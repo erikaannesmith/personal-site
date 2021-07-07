@@ -16,6 +16,11 @@ export const StyledBlurb = styled.div`
   padding: 70px 100px;
   font-size: 26px;
   line-height: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  @media screen and (max-width: 960px) {
+    padding: 50px 30px;
+  }
 `;
 
 export const StyledBlurbSection = styled.div`
