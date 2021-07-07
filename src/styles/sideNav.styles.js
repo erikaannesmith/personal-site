@@ -17,11 +17,12 @@ export const StyledSideNav = styled.div`
 `;
 
 export const StyledNavOption = styled.a`
-  height: 50px;
+  height: 70px;
   border-bottom: 1px solid darkgrey;
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 30px;
   color: white;
   letter-spacing: 3px;
+  font-size: 20px;
 `;
