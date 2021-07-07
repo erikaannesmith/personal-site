@@ -1,83 +1,34 @@
 import React from "react";
 import {
-  StyledTopContent,
+  StyledProfileImageWrapper,
   StyledProfileImage,
-  StyledInfoTitle,
-  StyledInfoSection,
-  StyledBottomContent,
-  StyledSectionInfo,
-  StyledInfo,
-  StyledLearnMore,
-  StyledValue,
-  StyledExperiences,
+  StyledBlurb,
+  StyledBlurbSection,
+  StyledDivider,
+  StyledBlurbIntro,
 } from "../styles/index.styles";
-import experiences from "../../public/data/experiences";
 
-export default function Home({
-  userData = {},
-  activeSection,
-  setActiveSection,
-}) {
+export default function Home() {
   return (
     <>
-      <StyledTopContent>
-        <StyledProfileImage width={300} src="./headshot.JPG" />
-        <StyledExperiences>
-          {experiences.map((experience) => (
-            <StyledInfoSection
-              key={experience.title}
-              onClick={() => setActiveSection(experience.title)}
-              isActive={activeSection === experience.title}
-            >
-              <StyledInfoTitle>{experience.title}</StyledInfoTitle>
-              <StyledValue>
-                {experience.items.map((item) => item.name).join(" → ")}
-              </StyledValue>
-            </StyledInfoSection>
-          ))}
-        </StyledExperiences>
-      </StyledTopContent>
-      {!activeSection && (
-        <StyledLearnMore>
-          hi there! click a section to learn more ☝🏼
-        </StyledLearnMore>
-      )}
-      <StyledBottomContent>
-        <SectionInfo section={activeSection} />
-      </StyledBottomContent>
+      <StyledProfileImageWrapper>
+        <StyledProfileImage src="./headshot.JPG" />
+      </StyledProfileImageWrapper>
+      <StyledBlurb>
+        <StyledBlurbIntro>
+          Hi there! I'm Erika.
+          <StyledDivider />
+        </StyledBlurbIntro>
+        <StyledBlurbSection>
+          I'm a Denver-based software engineer primarily playing in the
+          front-end space. I love developing clean, simple solutions to complex
+          problems. I believe that collaborating with a broad range of
+          backgrounds, experiences, and perspectives enables us to deliver the
+          best possible product. I believe that the work we do can and does make
+          a difference and it's our responsibility to ensure that the tools we
+          build make the world a better place for everyone.
+        </StyledBlurbSection>
+      </StyledBlurb>
     </>
   );
-}
-
-const SectionInfo = ({ section }) => {
-  const sectionData = experiences.find(
-    (experience) => experience.title === section
-  );
-  return (
-    section && (
-      <StyledSectionInfo>
-        {sectionData.items.map((item) => (
-          <div key={item.name}>
-            <a href={item.link} target="_blank">
-              <StyledInfo className="name">{item.name}</StyledInfo>
-            </a>
-            <StyledInfo className="timeline">{item.timeline}</StyledInfo>
-            <StyledInfo className="summary">{item.summary}</StyledInfo>
-          </div>
-        ))}
-      </StyledSectionInfo>
-    )
-  );
-};
-
-export async function getStaticProps() {
-  const response = await fetch(
-    `https://api.github.com/users/erikaannesmith`
-  ).then((response) => response.json());
-
-  return {
-    props: {
-      userData: response,
-    },
-  };
 }
