@@ -1,17 +1,5 @@
 import styled from "styled-components";
 
-export const StyledProfileImageWrapper = styled.div`
-  position: relative;
-  overflow: hidden;
-  max-height: 600px;
-  display: flex;
-  align-items: center;
-`;
-
-export const StyledProfileImage = styled.img`
-  width: 100%;
-`;
-
 export const StyledBlurb = styled.div`
   padding: 70px 100px;
   font-size: 26px;
